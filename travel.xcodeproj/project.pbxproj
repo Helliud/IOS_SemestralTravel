@@ -15,6 +15,8 @@
 		BE53CF672383E32600A4E6A5 /* celdaHotelDetalleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE53CF662383E32600A4E6A5 /* celdaHotelDetalleController.swift */; };
 		BE53CF6C2383F13B00A4E6A5 /* conciertoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE53CF6B2383F13B00A4E6A5 /* conciertoController.swift */; };
 		BE53CF7E2383F30800A4E6A5 /* celdaConciertoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE53CF7D2383F30700A4E6A5 /* celdaConciertoController.swift */; };
+		BE56AA002389CD3A008F89A7 /* conciertoDetalleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE56A9FF2389CD3A008F89A7 /* conciertoDetalleController.swift */; };
+		BE56AA022389D488008F89A7 /* celdaConciertoDetalleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE56AA012389D488008F89A7 /* celdaConciertoDetalleController.swift */; };
 		BE8EDB58237B5545007A43F4 /* modeloHotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8EDB57237B5545007A43F4 /* modeloHotel.swift */; };
 		BE8EDB6A237B5AFB007A43F4 /* modeloConcierto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8EDB69237B5AFB007A43F4 /* modeloConcierto.swift */; };
 		BEB086792383C35B000CA899 /* hotelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB086782383C35B000CA899 /* hotelController.swift */; };
@@ -173,6 +175,8 @@
 		BE53CF662383E32600A4E6A5 /* celdaHotelDetalleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdaHotelDetalleController.swift; sourceTree = "<group>"; };
 		BE53CF6B2383F13B00A4E6A5 /* conciertoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = conciertoController.swift; sourceTree = "<group>"; };
 		BE53CF7D2383F30700A4E6A5 /* celdaConciertoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdaConciertoController.swift; sourceTree = "<group>"; };
+		BE56A9FF2389CD3A008F89A7 /* conciertoDetalleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = conciertoDetalleController.swift; sourceTree = "<group>"; };
+		BE56AA012389D488008F89A7 /* celdaConciertoDetalleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdaConciertoDetalleController.swift; sourceTree = "<group>"; };
 		BE8EDB57237B5545007A43F4 /* modeloHotel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modeloHotel.swift; sourceTree = "<group>"; };
 		BE8EDB69237B5AFB007A43F4 /* modeloConcierto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modeloConcierto.swift; sourceTree = "<group>"; };
 		BEB086782383C35B000CA899 /* hotelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hotelController.swift; sourceTree = "<group>"; };
@@ -276,6 +280,8 @@
 				BE53CF662383E32600A4E6A5 /* celdaHotelDetalleController.swift */,
 				BE53CF6B2383F13B00A4E6A5 /* conciertoController.swift */,
 				BE53CF7D2383F30700A4E6A5 /* celdaConciertoController.swift */,
+				BE56A9FF2389CD3A008F89A7 /* conciertoDetalleController.swift */,
+				BE56AA012389D488008F89A7 /* celdaConciertoDetalleController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -617,9 +623,11 @@
 				BE53CF7E2383F30800A4E6A5 /* celdaConciertoController.swift in Sources */,
 				BED41818237376AD00D36DC5 /* ViewController.swift in Sources */,
 				BEB086792383C35B000CA899 /* hotelController.swift in Sources */,
+				BE56AA002389CD3A008F89A7 /* conciertoDetalleController.swift in Sources */,
 				BE8EDB6A237B5AFB007A43F4 /* modeloConcierto.swift in Sources */,
 				BED41814237376AD00D36DC5 /* AppDelegate.swift in Sources */,
 				BED41816237376AD00D36DC5 /* SceneDelegate.swift in Sources */,
+				BE56AA022389D488008F89A7 /* celdaConciertoDetalleController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

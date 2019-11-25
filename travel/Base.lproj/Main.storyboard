@@ -330,7 +330,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Detalle Hotel" id="NOL-nj-wMh"/>
                     <connections>
-                        <outlet property="tvHotelDetalle" destination="doD-cy-KSu" id="9nJ-pD-RLV"/>
+                        <outlet property="tvHotelDetalle" destination="doD-cy-KSu" id="Sxr-uU-vjS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PaZ-qP-F4M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -395,7 +395,7 @@
                                             <outlet property="imgConcierto" destination="j0t-QN-43H" id="HRC-zn-GYD"/>
                                             <outlet property="lblClasificacion" destination="n5q-mG-6pr" id="7Sx-Ie-Fnh"/>
                                             <outlet property="lblConcierto" destination="xWj-Ws-vQK" id="X8B-GH-Zvg"/>
-                                            <segue destination="sT3-kl-wHf" kind="show" identifier="goToDetalleConcierto" trigger="accessoryAction" id="6Xo-Hc-lqU"/>
+                                            <segue destination="sT3-kl-wHf" kind="show" identifier="goToConciertoDetalles" id="UGW-U2-Wa3"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -426,7 +426,7 @@
         <!--Detalle Concierto-->
         <scene sceneID="WAY-20-KJS">
             <objects>
-                <viewController id="sT3-kl-wHf" sceneMemberID="viewController">
+                <viewController id="sT3-kl-wHf" customClass="conciertoDetalleControler" customModule="travel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="raS-Wm-753">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -435,7 +435,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="472" id="4kV-wg-p7f" customClass="celdaConciertoDetalleController" customModule="travel" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaConciertoDetalle" rowHeight="472" id="4kV-wg-p7f" customClass="celdaConciertoDetalleController" customModule="travel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="472"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4kV-wg-p7f" id="cQC-T2-KjL">
@@ -544,8 +544,26 @@
                                                 <constraint firstItem="ibx-yp-7Jg" firstAttribute="top" secondItem="bEt-ex-XbV" secondAttribute="bottom" constant="1" id="zgZ-1K-oLy"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imagenBanda1" destination="rpc-Sl-7WH" id="6zQ-LY-JjS"/>
+                                            <outlet property="imagenBanda2" destination="VQf-hV-sAS" id="LCp-zD-l2q"/>
+                                            <outlet property="lblCiudadBanda" destination="HN2-JZ-gez" id="K5F-wg-5Ng"/>
+                                            <outlet property="lblDireccionBanda" destination="vxP-eX-wrj" id="ZLU-n3-sDy"/>
+                                            <outlet property="lblEstadoBanda" destination="lMc-gt-l0u" id="zB9-1b-kAJ"/>
+                                            <outlet property="lblFechaFin" destination="bEt-ex-XbV" id="iyS-43-sO6"/>
+                                            <outlet property="lblFechaInicio" destination="pLR-5X-Ibh" id="EoD-NU-j2x"/>
+                                            <outlet property="lblHoraFinal" destination="jXM-dS-pqh" id="7XI-Ol-63q"/>
+                                            <outlet property="lblHoraInicio" destination="A13-Dy-6rt" id="rxy-tm-HJI"/>
+                                            <outlet property="lblLugarBanda" destination="ROz-Ug-fGN" id="bwV-gf-M9p"/>
+                                            <outlet property="lblNombreBanda" destination="CO4-wj-oi3" id="XET-Pd-V5v"/>
+                                            <outlet property="lblPaisBanda" destination="ibx-yp-7Jg" id="qPu-QN-7GR"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="sT3-kl-wHf" id="dur-YW-Agg"/>
+                                    <outlet property="delegate" destination="sT3-kl-wHf" id="852-yN-K1r"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -558,6 +576,9 @@
                         <viewLayoutGuide key="safeArea" id="i0k-w1-WZi"/>
                     </view>
                     <navigationItem key="navigationItem" title="Detalle Concierto" id="Pr0-Td-NEB"/>
+                    <connections>
+                        <outlet property="tvConciertoDetalles" destination="evG-TG-2z6" id="m7D-TD-Ff8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ix-ag-llW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

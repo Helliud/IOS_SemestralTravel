@@ -28,7 +28,7 @@ class hotelDetalleControler: UIViewController,UITableViewDelegate,UITableViewDat
         let celda = tableView.dequeueReusableCell(withIdentifier: "celdaHotelDetalle") as? celdaHotelDetalleController
         
         
-         celda?.lblNombre.text = hotel!.nombreHotel.uppercased()
+        celda?.lblNombre.text = hotel!.nombreHotel.uppercased()
          celda?.lblPais.text = hotel!.paisHotel
          celda?.lblCosto.text = hotel!.costoHotel
          celda?.lblSitio.text = hotel!.ubicacionHotel

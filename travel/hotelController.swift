@@ -11,7 +11,8 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
-class hotelController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class hotelController:
+    UIViewController,UITableViewDelegate,UITableViewDataSource {
     
    
     @IBOutlet weak var tvHotel: UITableView!
@@ -20,6 +21,7 @@ class hotelController: UIViewController,UITableViewDelegate,UITableViewDataSourc
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         AF.request("https://molletravel.azurewebsites.net/wp-json/acf/v3/hoteles").responseJSON {
                    response in switch(response.result){
                    case .success(let datos) :

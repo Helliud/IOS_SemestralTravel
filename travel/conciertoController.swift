@@ -24,8 +24,9 @@ class conciertoController: UIViewController,UITableViewDelegate,UITableViewDataS
                    response in switch(response.result){
                    case .success(let datos) :
                        if let arregloConcierto = datos as? NSArray{
-                           for hotel in arregloConcierto {
-                               if let diccionarioConcierto = hotel as? NSDictionary{
+                           for concierto in arregloConcierto {
+                            
+                               if let diccionarioConcierto = concierto as? NSDictionary{
                                    let nuevoConcierto = modeloConcierto(diccionario: diccionarioConcierto)
                                    self.concierto.append(nuevoConcierto)
                                }
@@ -66,8 +67,8 @@ class conciertoController: UIViewController,UITableViewDelegate,UITableViewDataS
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToConciertoDetalles"{
-                   let destino = segue.destination as? conciertoController
-            destino?.concierto = [concierto[tvConcierto.indexPathForSelectedRow!.row]]
+                   let destino = segue.destination as? conciertoDetalleControler
+            destino?.concierto = concierto[tvConcierto.indexPathForSelectedRow!.row]
     }
     
     
