@@ -39,7 +39,8 @@ class hotelDetalleControler: UIViewController,UITableViewDelegate,UITableViewDat
          celda?.lblDescripcion.text = hotel!.descripcionHotel
          celda?.lblCalificacion.text = hotel!.calificacionHotel
        
-
+        print("caca \(hotel?.calificacionHotel)")
+ 
           AF.request("https://molletravel.azurewebsites.net/" + hotel!.imagen1Hotel).responseImage{
               response in
               switch(response.result) {

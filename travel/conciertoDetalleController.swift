@@ -28,7 +28,7 @@ class conciertoDetalleControler: UIViewController,UITableViewDelegate,UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = tableView.dequeueReusableCell(withIdentifier: "celdaConciertoDetalle") as? celdaConciertoDetalleController
         
-        celda?.lblNombreBanda.text = concierto!.nombreBanda
+        celda?.lblNombreBanda.text = concierto!.nombreBanda.uppercased()
         celda?.lblFechaInicio.text = concierto!.fechaInicio
         celda?.lblFechaInicio.text = concierto!.fechaFin
         celda?.lblPaisBanda.text = concierto!.paisBanda
@@ -37,9 +37,9 @@ class conciertoDetalleControler: UIViewController,UITableViewDelegate,UITableVie
          celda?.lblLugarBanda.text = concierto!.lugarBanda
          celda?.lblHoraInicio.text = concierto!.horaInicio
         celda?.lblHoraFinal.text = concierto!.horaFin
-       
+        celda?.lblDireccionBanda.text = concierto!.ubicacionBanda
 
-          AF.request("https://molletravel.azurewebsites.net/" + concierto!.imagen1Banda).responseImage{
+          AF.request("https://molletravel.azurewebsites.net/" + concierto!.imagen2Banda).responseImage{
               response in
               switch(response.result) {
               case .success(let data) :
@@ -49,7 +49,7 @@ class conciertoDetalleControler: UIViewController,UITableViewDelegate,UITableVie
           }
         }
             
-            AF.request("https://molletravel.azurewebsites.net/" + self.concierto!.imagen2Banda).responseImage{
+            AF.request("https://molletravel.azurewebsites.net/" + self.concierto!.imagen1Banda).responseImage{
                 response in
                 switch(response.result) {
                 case .success(let data) :
